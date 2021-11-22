@@ -1,0 +1,26 @@
+﻿@model AdminTemplate.Models.user_details
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Logout</title>
+</head>
+<body>
+    <div>
+        Welcome
+        @*<b>@HttpContext.Current.User.Identity.Name</b>
+        <br />*@
+        <br />
+        @using (Html.BeginForm("Logout", "User_login", FormMethod.Post))
+        {
+            <a href="javascript:;" onclick="document.forms[0].submit();">Logout</a>
+        }
+    </div>
+</body>
+</html>
